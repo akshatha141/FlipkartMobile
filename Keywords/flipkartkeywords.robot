@@ -59,3 +59,22 @@ Verify if the item is present in the cart
 
     Wait for text on Screen          ${POCO_Steel_Blue}     
     Page Should Contain Text         ${POCO_Steel_Blue} 
+    
+   
+#Alternate Scenario 
+
+#Launch Flipkart App
+
+    #Open Application    ${Port_Number}     platformName=${Platform_Name}      deviceName=${Device_Name}      appPackage=${App_Package}      appActivity=${App_Activity}    noReset=true
+
+# noRest=True capability used in open application doesn't clear previous app data and it launches directly to flipkart home page omiting user login details.
+
+#Click on Cart Icon 
+     # wait for Element on Screen        com.flipkart.android:id/cart_bg_icon
+     # Click  Element                    com.flipkart.android:id/cart_bg_icon
+
+# verify the product 
+
+  # Wait for text on Screen          ${POCO_Steel_Blue}     
+  # Page Should Contain Text         ${POCO_Steel_Blue}
+    
